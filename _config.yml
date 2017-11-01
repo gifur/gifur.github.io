@@ -74,6 +74,11 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: next
 
+# Social
+social:
+  GitHub: https://github.com/gifur
+  ZhiHu: https://www.zhihu.com/people/liao-gui-fa/activities
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
