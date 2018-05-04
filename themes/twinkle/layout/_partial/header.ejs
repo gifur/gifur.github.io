@@ -1,0 +1,17 @@
+<!-- header top section -->
+<section class="banner" role="banner">
+  <header id="header">
+    <div class="header-content clearfix"> <a class="logo" href="index.html">
+      <img class="logo" src="/images/logo.png" alt=""></a>
+      <nav class="navigation" role="navigation">
+        <ul class="primary-nav">
+          <li>2018.04.26.05100</li>
+          <% for(name in theme.menu) { %>
+            <li><a href="<%- url_for(theme.menu[name]) %>"><%- __(name) %></a></li>
+          <% } %>
+        </ul>
+      </nav>
+      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+  </header>
+</section>
+<!-- header top section -->
