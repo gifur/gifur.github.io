@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Notes On Creating A Hexo Theme | 物役记</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="SetupTo Update NPM: npm install npm@latest -g. In 2015 it makes sense to use NVM.  NVM InstallationInstructions. Update NPM: npm install npm@latest -g Hexo: why can’t you use helper functions in sou">
+<meta name="keywords" content="Programming,Design">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Notes On Creating A Hexo Theme">
+<meta property="og:url" content="http://www.materialchains.com/2016/01/02/2016-01-02-Notes-On-Creating-A-Hexo-Theme/index.html">
+<meta property="og:site_name" content="物役记">
+<meta property="og:description" content="SetupTo Update NPM: npm install npm@latest -g. In 2015 it makes sense to use NVM.  NVM InstallationInstructions. Update NPM: npm install npm@latest -g Hexo: why can’t you use helper functions in sou">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://s3.amazonaws.com/ptsteadman-images/hexo.png">
+<meta property="og:updated_time" content="2018-04-30T16:46:23.676Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Notes On Creating A Hexo Theme">
+<meta name="twitter:description" content="SetupTo Update NPM: npm install npm@latest -g. In 2015 it makes sense to use NVM.  NVM InstallationInstructions. Update NPM: npm install npm@latest -g Hexo: why can’t you use helper functions in sou">
+<meta name="twitter:image" content="https://s3.amazonaws.com/ptsteadman-images/hexo.png">
+  
+    <link rel="alternate" href="/atom.xml" title="物役记" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/flexslider.css">
+  <link rel="stylesheet" href="/css/jquery.fancybox.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/animate.min.css">
+  <link rel="stylesheet" href="/css/font-icon.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  
+
+</head>
+
+<body>
+<!-- header top section -->
+<section class="banner" role="banner">
+  <header id="header">
+    <div class="header-content clearfix"> <a class="logo" href="index.html">
+      <img class="logo" src="/images/logo.png" alt=""></a>
+      <nav class="navigation" role="navigation">
+        <ul class="primary-nav">
+          <li>2018.04.26.05100</li>
+          
+            <li><a href="/">主页</a></li>
+          
+            <li><a href="/archives">归档</a></li>
+          
+        </ul>
+      </nav>
+      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+  </header>
+</section>
+<!-- header top section -->
+
+<section id="main" class="section">
+<div class="container">
+  <article id="post-2016-01-02-Notes-On-Creating-A-Hexo-Theme" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Notes On Creating A Hexo Theme
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/01/02/2016-01-02-Notes-On-Creating-A-Hexo-Theme/" class="article-date">
+  <time datetime="2016-01-01T16:00:00.000Z" itemprop="datePublished">2016-01-02</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+  </div>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div class="image-strip"><br><img src="https://s3.amazonaws.com/ptsteadman-images/hexo.png"><br></div>
+
+<h2 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h2><p>To Update NPM: <code>npm install npm@latest -g</code>.</p>
+<p>In 2015 it makes sense to use NVM.  <a href="http://linoxide.com/ubuntu-how-to/install-node-js-ubuntu" target="_blank" rel="external">NVM Installation<br>Instructions</a>.</p>
+<p>Update NPM: <code>npm install npm@latest -g</code></p>
+<p>Hexo: why can’t you use helper functions in source code?<br>This should be in docs.</p>
+<h2 id="Creating-a-Custom-Index-File-in-Hexo"><a href="#Creating-a-Custom-Index-File-in-Hexo" class="headerlink" title="Creating a Custom Index File in Hexo"></a>Creating a Custom Index File in Hexo</h2><p>Trying to generate a custom index file in source, hexo would ignore<br><code>source/index.md</code> no matter what I did.  What I had to do was uninstall<br><code>hexo-generator-index</code>.  <a href="https://github.com/hexojs/hexo/issues/1077" target="_blank" rel="external">See<br>here</a>.  Then it works.  So, that<br>will be part of the setup for my theme.  But, it’s worth it in order to properly<br>seperate the theme from the content, I think.  Having everyone edit the theme<br>index.ejs template is no good.</p>
+<h2 id="Hexo-Rendering-Raw-EJS-File-Problem-I-Encountered"><a href="#Hexo-Rendering-Raw-EJS-File-Problem-I-Encountered" class="headerlink" title="Hexo Rendering Raw EJS File Problem I Encountered"></a>Hexo Rendering Raw EJS File Problem I Encountered</h2><p>Sometimes the server would keep rendering an old version of my code, but as<br>text.  So I’d see stuff like</p>
+<pre><code>&lt;% if (site.tags.length){ %&gt;
+</code></pre><p>The raw ejs, essentially.  Restarting the server or running <code>hexo clean</code> didn’t<br>do anything.</p>
+<p>After some time, I realized it was due to the gedit swap files being read by<br>hexo as the actual layout files: for example, <code>tag.ejs~</code>.  My <code>partial</code> helpers<br>looked like: <code>&lt;%- partial(&#39;_partials/tag&#39;) %&gt;</code>, and apparently hexo was reading<br>in <code>tag.ejs~</code> instead of <code>tag.ejs</code>.  And therefore, the ejs wasn’t rendering.</p>
+<p>To fix this, I simply changed my partial helper to <code>&lt;%-
+partial(&#39;_partials/tag.ejs&#39;) %&gt;</code>.  Problem solved.</p>
+<h2 id="Hexo-Excerpt-Variable"><a href="#Hexo-Excerpt-Variable" class="headerlink" title="Hexo Excerpt Variable"></a>Hexo Excerpt Variable</h2><p>I was confused by the behavior of the hexo <code>excerpt</code> variable.  If you define<br><code>excerpt: something</code> in the front matter, hexo ignores that.  Instead, to get it<br>to work, one needs to add a <code>&lt;!-- more --&gt;</code> comment in the source of the post.<br>Or, you can install a plugin that allows you to define custom excerpt in the<br>front matter.</p>
+<h2 id="Scripts-Directory"><a href="#Scripts-Directory" class="headerlink" title="Scripts Directory"></a>Scripts Directory</h2><p>One of the things I really discovered too late is the “Scripts” directory in the<br>theme folder.  In Hexo, the various plugins drive the structure of the site, as<br>opposed to the placement of different files and directories, as in Jekyll.  The<br>plugins programatically create folder structure, etc, where in Jekyll I mostly<br>used the liquid markup to structure the site.  </p>
+<p>The problem is, then, that the user wants to extend hexo to do some sort of<br>custom thing.  If one had to publish a new plugin, that’d be too much work.  But<br>the theme level scripts folder allows one to extend the base hexo functionality<br>in ‘user space’ effectively.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.materialchains.com/2016/01/02/2016-01-02-Notes-On-Creating-A-Hexo-Theme/" data-id="cjgn0rdue000hc8uthyjo0ktx" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Design/">Design</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Programming/">Programming</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/04/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="fa fa-long-arrow-left"></i>
+      <strong class="article-nav-caption">上一篇</strong>&nbsp;
+      <strong class="article-nav-title">
+        
+          开篇序
+        
+      </strong>
+    </a>
+  
+  
+    <a href="/2015/05/02/2015-05-02-How-To-Impress/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>&nbsp;
+      <strong class="article-nav-title">How To Impress Employers at Infosessions</strong>
+      <i class="fa fa-long-arrow-right"></i>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+</div>
+</section>
+<!-- footer section -->
+<footer class="footer">
+  <div class="container">
+    <div class="col-md-4 left">
+      <h5>大道至简 知易行难</h5>
+      <p>文档撰写遵循 <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a> 协议</p>
+    </div>
+    <div class="col-md-4">
+      <p class="follow-me-icons">
+        <a href="https://github.com/gifur/" title="Github" target="_blank"><i class="fa fa-github fa-2"></i></a>
+      </p>
+    </div>
+    <div class="col-md-4 right">
+      <p> <i class="fa fa-heart pulse"></i> Power by <a href="https://hexo.io/" target="_blank" title="Hexo">Hexo</a> & <a href="https://github.com/gifur/" target="_blank" title="Github">Github</a><br>
+        © 2018 Gifur.material-chains <a href="http://www.materialchains.com/" title="备案证书" target="_blank">粤ICP备17151675号</a></p>
+    </div>
+  </div>
+</footer>
+<!-- footer section -->
+
+<!-- JS FILES -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js"></script>
+<script src="/js/retina.min.js"></script>
+<script src="/js/modernizr.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
