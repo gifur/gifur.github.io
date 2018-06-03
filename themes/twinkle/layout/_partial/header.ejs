@@ -3,9 +3,8 @@
   <header id="header">
     <div class="header-content clearfix"> <a class="logo" href="index.html">
       <img class="logo" src="/images/logo.png" alt=""></a>
-      <nav class="navigation" role="navigation">
+      <nav class="navigation" role="navigation" id="navigation">
         <ul class="primary-nav">
-          <li>2018.04.26.05100</li>
           <% for(name in theme.menu) { %>
             <li><a href="<%- url_for(theme.menu[name]) %>"><%- __(name) %></a></li>
           <% } %>

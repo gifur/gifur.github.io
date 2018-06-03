@@ -30,6 +30,8 @@
   <% } %>
   <% if (config.highlight.enable){ %>
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <% } else { %>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
   <% } %>
 
   <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -39,6 +41,10 @@
   <link rel="stylesheet" href="/css/responsive.css">
   <link rel="stylesheet" href="/css/animate.min.css">
   <link rel="stylesheet" href="/css/font-icon.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <% if(String(url_for(path)).lastIndexOf("/about") != -1) { %>
+    <%- css('/css/simple-line-icons.css') %>
+    <%- css('/css/about.css') %>
+    <%} %>
   <%- partial('google-analytics') %>
 </head>
