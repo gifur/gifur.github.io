@@ -22,8 +22,6 @@
     <link rel="icon" href="/favicon.ico">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
 
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/flexslider.css">
@@ -32,7 +30,8 @@
   <link rel="stylesheet" href="/css/responsive.css">
   <link rel="stylesheet" href="/css/animate.min.css">
   <link rel="stylesheet" href="/css/font-icon.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
+  
   
 
 </head>
@@ -43,13 +42,14 @@
   <header id="header">
     <div class="header-content clearfix"> <a class="logo" href="index.html">
       <img class="logo" src="/images/logo.png" alt=""></a>
-      <nav class="navigation" role="navigation">
+      <nav class="navigation" role="navigation" id="navigation">
         <ul class="primary-nav">
-          <li>2018.04.26.05100</li>
           
             <li><a href="/">主页</a></li>
           
             <li><a href="/archives">归档</a></li>
+          
+            <li><a href="/about">关于</a></li>
           
         </ul>
       </nav>
@@ -59,8 +59,9 @@
 <!-- header top section -->
 
 <section id="main" class="section">
-<div class="container">
   
+  <div class="container">
+      
   
   
     
@@ -145,7 +146,8 @@
 
 
 
-</div>
+  </div>
+  
 </section>
 <!-- footer section -->
 <footer class="footer">
@@ -155,24 +157,32 @@
       <p>文档撰写遵循 <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a> 协议</p>
     </div>
     <div class="col-md-4">
-      <p class="follow-me-icons">
-        <a href="https://github.com/gifur/" title="Github" target="_blank"><i class="fa fa-github fa-2"></i></a>
-      </p>
+      <ul class="social-links">
+        <li><a href="https://github.com/gifur/"  target="_blank" class="wow fadeInUp"><i class="fa fa-github"></i></a></li>
+        <li><a href="https://weibo.com/liaoguifa/"  target="_blank" class="wow fadeInUp"><i class="fa fa-weibo"></i></a></li>
+        <li><a href="http://www.cnblogs.com/liaoguifa/" title="将跳转至博客园" target="_blank" class="wow fadeInUp"><i class="fa fa-windows"></i></a></li>
+        <li><a href="index.html#"  target="_blank" class="wow fadeInUp"><i class="fa fa-weixin"></i></a></li>
+      </ul>
     </div>
     <div class="col-md-4 right">
-      <p> <i class="fa fa-heart pulse"></i> Power by <a href="https://hexo.io/" target="_blank" title="Hexo">Hexo</a> & <a href="https://github.com/gifur/" target="_blank" title="Github">Github</a><br>
-        © 2018 Gifur.material-chains <a href="http://www.materialchains.com/" title="备案证书" target="_blank">粤ICP备17151675号</a></p>
+      <p>
+        <i class="fa fa-heart animated pulse span"></i> Power by <a href="https://hexo.io/" target="_blank" title="Hexo">Hexo</a> & <a href="https://github.com/gifur/" target="_blank" title="Github">Github</a><br>
+        © 2018 Gifur.material-chains <a href="http://www.materialchains.com/" title="备案证书" target="_blank">粤ICP备17151675号</a><br>
+        verion:<nbsp;>2018.04.26.05100
+      </p>
     </div>
   </div>
 </footer>
 <!-- footer section -->
 
 <!-- JS FILES -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+<script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/jquery.fancybox.pack.js"></script>
 <script src="/js/retina.min.js"></script>
 <script src="/js/modernizr.js"></script>
 <script src="/js/main.js"></script>
+
 </body>
 </html>
