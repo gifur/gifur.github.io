@@ -574,7 +574,7 @@ ul li {
   width: auto;
 }
 .article {
-  margin-top: 10%;
+  margin-top: 16%;
 }
 .article-inner {
   overflow: hidden;
@@ -613,8 +613,16 @@ ul li {
 .article-entry {
   margin-top: 40px;
 }
+.article-entry h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
 .article-nav-caption {
   font-weight: 500;
+}
+#article-nav {
+  margin: 20px 0;
 }
 #article-nav-newer {
   float: left;
@@ -628,7 +636,7 @@ ul li {
 }
 .article-nav-link-wrap {
   background-color: #333;
-  margin: 40px 0;
+  margin: 10px 0;
   color: #fff;
   font-size: 15px;
   font-weight: 600;
