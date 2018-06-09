@@ -135,7 +135,8 @@
 /* ---------------------------------------------- */
 
 #about {
-	background: url(./images/cover.jpg);
+	/*background: url(./images/cover.jpg);*/
+	background: url(http://oxutubpgi.bkt.clouddn.com/18-6-9/14444283.jpg);
 	background-color: #222;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -367,108 +368,6 @@
 
 .navbar-custom .navbar-toggle .icon-bar {
 	background: #222;
-}
-
-/* ---------------------------------------------- /*
- * Scroll to top
-/* ---------------------------------------------- */
-
-.scroll-up {
-	position: fixed;
-	display: none;
-	z-index: 999;
-	bottom: 2em;
-	right: 2em;
-}
-
-.scroll-up a {
-	background-color: rgba(135, 135, 135, 0.5);
-	display: block;
-	width: 35px;
-	height: 35px;
-	text-align: center;
-	color: #fff;
-	font-size: 15px;
-	line-height: 30px;
-}
-
-.scroll-up a:hover,
-.scroll-up a:active {
-	background-color: rgba(235, 235, 235, .8);
-	color: #e7746f;
-}
-
-/* ---------------------------------------------- /*
- *Scroll Down
-/* ---------------------------------------------- */
-
-.scroll-down {
-	position: absolute;
-	left: 50%;
-	bottom: 40px;
-	border: 2px solid #fff;
-	border-radius: 50%;
-	height: 50px;
-	width: 50px;
-	margin-left: -15px;
-	display: block;
-	z-index: 10;
-    text-align: center;
-}
-
-.scroll-down span{
-    position: relative;
-    color: #fff;
-    -webkit-animation-name: drop;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: linear;
-	-webkit-animation-delay: 0s;
-	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-play-state: running;
-	animation-name: drop;
-	animation-duration: 1s;
-	animation-timing-function: linear;
-	animation-delay: 0s;
-	animation-iteration-count: infinite;
-	animation-play-state: running;
-}
-
-@-webkit-keyframes drop	{
-	0%   { top:0px;  opacity: 0;}
-	30%  { top:10px; opacity: 1;}
-	100% { top:25px; opacity: 0;}
-}
-
-@keyframes drop	{
-	0%   { top:0px;  opacity: 0;}
-	30%  { top:10px; opacity: 1;}
-	100% { top:25px; opacity: 0;}
-}
-
-/* ---------------------------------------------- /*
- * Preloader
-/* ---------------------------------------------- */
-
-#preloader {
-	background: #FFF;
-	bottom: 0;
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 9999;
-}
-
-#status {
-	background-image: url(./images/preloader.gif);
-	background-position: center;
-	background-repeat: no-repeat;
-	height: 200px;
-	left: 50%;
-	margin: -100px 0 0 -100px;
-	position: absolute;
-	top: 50%;
-	width: 200px;
 }
 
 /* ---------------------------------------------- /*

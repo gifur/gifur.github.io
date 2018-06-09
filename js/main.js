@@ -1,8 +1,30 @@
 (function($){
 
+  /* ---------------------------------------------- /*
+	 * Preloader
+	/* ---------------------------------------------- */
+
+	$(window).load(function() {
+		$('#status').fadeOut();
+		$('#preloader').delay(300).fadeOut('slow');
+	});
+
 $(document).ready(function() {
 
   var MQL = 1170;
+
+	/* ---------------------------------------------- /*
+	 * Smooth scroll / Scroll To Top
+	/* ---------------------------------------------- */
+
+	$('a[href*=#]').bind("click", function(e){
+
+		var anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: $(anchor.attr('href')).offset().top
+		}, 1000);
+		e.preventDefault();
+	});
 
 	// Header Scroll
 	$(window).on('scroll', function() {
@@ -47,6 +69,13 @@ if ($(window).width() > MQL) {
 
 	$(window).on('scroll', function () {
 	  	var cur_pos = $(this).scrollTop();
+
+			if (cur_pos > 100) {
+				$('.scroll-up').fadeIn();
+			} else {
+				$('.scroll-up').fadeOut();
+			}
+
 	  	sections.each(function() {
 	    	var top = $(this).offset().top - 76
 	        	bottom = top + $(this).outerHeight();
