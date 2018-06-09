@@ -7,8 +7,9 @@
       </header>
     <% } %>
     <div class="article-meta">
-      <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+      <%- partial('post/date', {class_name: 'article-date', date_format: 'MMMM Do YYYY'}) %>
       <%- partial('post/category') %>
+      <%- partial('post/tag') %>
     </div>
     <div class="article-entry" itemprop="articleBody">
       <% if (post.excerpt && index){ %>
@@ -27,7 +28,6 @@
       <% if (post.comments && config.disqus_shortname){ %>
         <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
       <% } %>
-      <%- partial('post/tag') %>
     </footer>
   </div>
   <% if (!index){ %>
@@ -41,4 +41,32 @@
     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
 </section>
-<% } %>
+<% } else {%>
+  <!--
+  <div class="row">
+        <div class="col-md-5 col-sm-6">
+          <h4>We're expert to create beautiful design &amp; smart technology</h4>
+          <p>Nullam at enim mauris. Donec et nunc ipsum. Suspendi tempus fringilla ipsu Cras metus euismod velit gravida at nunc ipsum.</p>
+        </div>
+        <div class="col-md-7 col-sm-6">
+          <div class="row">
+          <div class="col-md-4 col-sm-6 service text-center"> <span class="icon icon-browser"></span>
+            <div class="service-content">
+              <h5>Web &amp; Mobile</h5>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 service text-center"> <span class="icon icon-trophy"></span>
+            <div class="service-content">
+              <h5>Branding</h5>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 service text-center"> <span class="icon icon-megaphone"></span>
+            <div class="service-content">
+              <h5>Digital Marketing</h5>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    -->
+  <% } %>

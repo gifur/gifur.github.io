@@ -2,6 +2,10 @@
 <body>
 <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
 <section id="main" class="section">
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="status"></div>
+  </div>
   <% if(String(url_for(path)).lastIndexOf("/about") != -1) { %>
     <%- body %>
   <% } else {%>
@@ -10,6 +14,11 @@
   </div>
   <%}%>
 </section>
+
+<div class="scroll-up">
+  <a href="#main"><i class="fa fa-angle-up"></i></a>
+</div>
+
 <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
 <!-- JS FILES -->
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->

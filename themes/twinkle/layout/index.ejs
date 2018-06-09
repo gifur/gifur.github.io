@@ -11,7 +11,8 @@
             <%- post.excerpt %>
           </h3>
         </a>
-          <p class="post-meta">Posted by <a href="#"><%- post.author %></a> on <%- date(post.date, "YYYY-MM-DD") %></p>
+          <p class="post-meta">Posted by <a href="#"><%- post.author %></a> on
+            <span class="date" style="font-size: 16px;"><%- date(post.date, "MMMM Do YYYY") %></span</p>
       </div>
       <hr>
         <% }) %>
