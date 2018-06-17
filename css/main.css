@@ -996,7 +996,7 @@ blockquote footer {
   right: 2em;
 }
 .scroll-up a {
-  background-color: rgba(135,135,135,0.5);
+  background-color: #585858;
   display: block;
   width: 35px;
   height: 35px;
@@ -1008,7 +1008,7 @@ blockquote footer {
 .scroll-up a:hover,
 .scroll-up a:active {
   background-color: rgba(235,235,235,0.8);
-  color: #e7746f;
+  color: #333;
 }
 /* ---------------------------------------------- /*
  *Scroll Down
@@ -1078,6 +1078,144 @@ blockquote footer {
   position: absolute;
   top: 50%;
   width: 200px;
+}
+.dock {
+  position: fixed;
+  left: 0px;
+  width: 50px;
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+  z-index: 200;
+}
+.dock.closed {
+  z-index: 50;
+}
+.dock ul.icons {
+  position: absolute;
+  list-style: none;
+  left: 0px;
+  padding: 0px;
+  width: 50px;
+  border: 1px solid #6c7279;
+  border-left: none;
+  background: #fff;
+  -moz-border-radius: 0 10px 10px 0;
+  -webkit-border-radius: 0 10px 10px 0;
+  border-radius: 0 10px 10px 0;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.dock.closed ul.icons {
+  left: -70px;
+}
+.dock ul.icons {
+  padding: 9px 0;
+}
+.dock ul.icons li a {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  color: #333;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  z-index: 210;
+  padding-top: 9px;
+}
+.dock ul.icons li.active i {
+  -moz-opacity: 0.4;
+  opacity: 0.4;
+}
+.dock ul.icons li p {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: -260px;
+  padding: 15px 20px;
+  height: 120px;
+  color: White;
+  line-height: 30px;
+  border: 1px solid #333;
+  border-right: none;
+  background: #111;
+  -moz-border-radius: 0 10px 10px 0;
+  -webkit-border-radius: 0 10px 10px 0;
+  border-radius: 0 10px 10px 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0.1s;
+  -moz-transition: all 0.4s ease-in-out 0.1s;
+  -ms-transition: all 0.4s ease-in-out 0.1s;
+  -o-transition: all 0.4s ease-in-out 0.1s;
+  transition: all 0.4s ease-in-out 0.1s;
+  overflow: hidden;
+  z-index: 201;
+}
+.dock ul.icons li.active p {
+  left: 50px;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.dock ul.icons li.tel p {
+  width: 100px;
+}
+.dock ul.icons li.im p {
+  width: 115px;
+}
+.dock ul.icons li.im p a {
+  display: block;
+  margin-top: 12px;
+  width: 100px;
+  height: 35px;
+  line-height: 32px;
+  color: #00dfb9;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #00dfb9;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.dock ul.icons li.im p a:hover {
+  color: White;
+  background: #0f8773;
+  border: 1px solid #0f8773;
+}
+.dock ul.icons li.wechat p {
+  width: 118px;
+}
+.dock ul.icons li.wechat p img {
+  width: 115px;
+  border: 2px solid White;
+}
+.dock a.switch {
+  position: absolute;
+  text-align: center;
+  display: block;
+  top: 240px;
+  left: 11px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  -webkit-transition-delay: 0.15s;
+  -moz-transition-delay: 0.15s;
+  -ms-transition-delay: 0.15s;
+  -o-transition-delay: 0.15s;
+  transition-delay: 0.15s;
 }
 @-moz-keyframes drop {
   0% {
