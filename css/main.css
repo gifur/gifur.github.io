@@ -621,7 +621,7 @@ ul li {
 }
 .article strong,
 .article b {
-  font-weight: bolder;
+  font-weight: 700;
 }
 em,
 i {
