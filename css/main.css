@@ -207,7 +207,7 @@ a img:focus {
 body {
   font-family: "Source Sans Pro", Helvetica, sans-serif, "Microsoft YaHei";
   font-size: 15px;
-  color: #333;
+  color: #585858;
   overflow-x: hidden;
   font-weight: 300;
   line-height: 1.75;
@@ -604,16 +604,16 @@ ul li {
   display: inline-block;
 }
 .article p {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.75;
-  color: #333;
+  color: #585858;
 }
 .article li {
   padding-left: 0.5em;
   list-style: disc;
   font-size: 18px;
   line-height: 1.75;
-  color: #333;
+  color: #585858;
 }
 .article ul {
   list-style: disc;
